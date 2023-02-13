@@ -1,51 +1,27 @@
 using System.Reflection;
+using Gear.ContentManagement.ManagementControllers;
 using Gear.Core;
 using Gear.DAO;
+using Gear.DAO.Interfaces;
 using Gear.Models;
+using GearCMS;
 using GearCMS.Models.PageModels;
-
-//Mock
-var pageModels = new List<GearPageModel<object>>()
-            {
-                new GearPageModel<object>()
-                {
-                    Url = "/testPage1",
-                    Title="testPage1",
-                    PageViewName="HomePage",
-                    UserPageModel = new HomePageModel()
-                    {
-                        TestVariable = "test1"
-                    }
-                },
-                new GearPageModel<object>()
-                {
-                    Url = "/testPage2",
-                    Title="testPage2",
-                    PageViewName="HomePage",
-                    UserPageModel = new HomePageModel()
-                    {
-                        TestVariable = "test2"
-                    }
-                },
-                new GearPageModel<object>()
-                {
-                    Url = "/testPage1/subpage",
-                    Title="testPage2",
-                    PageViewName="Subpage",
-                    UserPageModel = new SubpageModel()
-                    {
-                        SubpageTestVariable = "testsubpage"
-                    }
-                }
-            };
-
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<IContentDAO>(new ContentDAOMock(pageModels));
-builder.Services.AddSingleton(new ViewInfoProvider());
+
+builder.Services.AddControllersWithViews().AddApplicationPart(typeof(ManagementPanelController).Assembly);
+builder.Services.AddSingleton<IContentDAO>(new MockContentPageDAO());
+builder.Services.AddSingleton<IContentRouteProvider>(new MockContentRouteDAO());
+builder.Services.AddSingleton(new TemplateInfoProvider());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -61,8 +37,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 //app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}");
+//    name: "config",
+//    pattern: "{controller=ManagementPanel}/{action=Get}");
 app.MapControllers();
 app.Run();
 

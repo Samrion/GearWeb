@@ -9,6 +9,6 @@ namespace Gear.Models
     public class GearRootModel
     {
         public string ?HostName { get; set; }
-        public List<GearPageModel<object>> ?Pages { get; set; }
+        public List<GearPageModel> ?Pages { get; set; }
     }
 }

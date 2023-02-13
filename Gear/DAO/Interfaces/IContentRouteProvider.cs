@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gear.Models
+namespace Gear.DAO.Interfaces
 {
-    public class GearNestedContentModel : GearModel
+    public interface IContentRouteProvider
     {
-        
+
+        public Dictionary<string, int> RouteTable { get; }
+
     }
 }

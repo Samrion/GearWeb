@@ -1,5 +1,11 @@
 ﻿@using Gear.Models
 @using GearCMS.Models.PageModels
-@model GearPageModel<HomePageModel>
+@model HomePageModel
 
-<h1>@Model.UserPageModel.TestVariable</h1>
+<body>
+	<h1>@Model.TestTitle</h1>
+	<p>TestValue:@Model.TestValue</p>
+	<p>AnotherTestValue:@Model.AnotherTestValue</p>
+</body>
+
+

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gear.Models
+namespace Gear.Models.Editors
 {
-    public class GearNestedContentModel : GearModel
+    public class TextBox : GearEditor<string>
     {
-        
+        public string Value { get; set; } = string.Empty;
     }
 }

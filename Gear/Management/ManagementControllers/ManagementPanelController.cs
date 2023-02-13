@@ -13,9 +13,16 @@ namespace Gear.ContentManagement.ManagementControllers
     public class ManagementPanelController : Controller
     {
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] {"XD"};
+            return View(@"GearConfigPanel");
         }
+
+        [Route("config/modelEditor")]
+        public IEnumerable<string> GetModelProperties(string modelName)
+        {
+            return new string[] { "model prop" };
+        }
+
     }
 }
