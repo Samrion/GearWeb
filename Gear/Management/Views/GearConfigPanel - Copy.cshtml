@@ -1,0 +1,34 @@
+﻿@using Gear.Management.Models
+@using System.Diagnostics
+@model List<ConfigUserPageModel>
+
+@{
+	Layout = "/Management/Views/GearConfigLayout.cshtml";
+}
+<h1>Config</h1>
+<div class="pages">
+	@foreach (var userPage in Model)
+	{
+		<div class="pageColumn">
+			@{
+				RenderPageColumn(userPage);
+			}
+		</div>
+	}
+</div>
+
+
+@functions
+{
+
+	void RenderPageColumn(ConfigUserPageModel userPage)
+	{
+		<a>@userPage.Title</a>
+		<a>Template: @userPage.TemplateName</a>
+		<a>Template model: @userPage.TemplateModelName</a>
+		foreach (var property in userPage.UserProperties)
+		{
+			<a>@property.TypeName : @property.Name</a>
+		}
+	}
+}

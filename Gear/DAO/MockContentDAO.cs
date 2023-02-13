@@ -13,16 +13,19 @@ namespace Gear.DAO
             new GearPageModel
             {
                 Id = 1,
+                Title = "HomePage",
                 TemplateName = "HomePage"
             },
             new GearPageModel
             {
                 Id = 2,
+                Title = "Subpage",
                 TemplateName = "Subpage"
             },
             new GearPageModel
             {
                 Id = 3,
+                Title = "Subpage2",
                 TemplateName = "Subpage2"
             }
         };
@@ -86,6 +89,11 @@ namespace Gear.DAO
         public GearPageModel? GetPageModelById(int id)
         {
             return PageModels.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public IEnumerable<GearPageModel> GetPageModels()
+        {
+            return PageModels;
         }
 
         public IEnumerable<UserModelProperty> GetUserModelPropertiesById(int id)

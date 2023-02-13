@@ -1,5 +1,5 @@
 using System.Reflection;
-using Gear.ContentManagement.ManagementControllers;
+using Gear.ContentManagement.Controllers;
 using Gear.Core;
 using Gear.DAO;
 using Gear.DAO.Interfaces;
@@ -13,12 +13,22 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var gearAssembly = typeof(ManagementPanelController).Assembly;
+builder.Services.AddControllersWithViews()
+    .AddApplicationPart(gearAssembly)
+    .AddRazorRuntimeCompilation();
 
-builder.Services.AddControllersWithViews().AddApplicationPart(typeof(ManagementPanelController).Assembly);
+builder.Services.Configure<MvcRazorRuntimeCompilationOptions>(options =>
+{
+    options.FileProviders.Add(new EmbeddedFileProvider(gearAssembly));
+});
+
 builder.Services.AddSingleton<IContentDAO>(new MockContentPageDAO());
 builder.Services.AddSingleton<IContentRouteProvider>(new MockContentRouteDAO());
 builder.Services.AddSingleton(new TemplateInfoProvider());

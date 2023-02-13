@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gear", "Gear\Gear.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GearTest", "GearTest\GearTest.csproj", "{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearViews", "GearViews\GearViews.csproj", "{CA4B9B20-5693-4EC5-8855-5699B75173E4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA4B9B20-5693-4EC5-8855-5699B75173E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA4B9B20-5693-4EC5-8855-5699B75173E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA4B9B20-5693-4EC5-8855-5699B75173E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA4B9B20-5693-4EC5-8855-5699B75173E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
