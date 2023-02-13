@@ -10,7 +10,6 @@ using Gear.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
-
 namespace Gear.ContentDelivery
 {
     [Route("/{**slug}")]
