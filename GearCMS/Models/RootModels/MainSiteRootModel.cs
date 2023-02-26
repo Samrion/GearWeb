@@ -1,6 +1,8 @@
-﻿namespace GearWeb.Models.RootModels
+﻿using Gear.Models;
+
+namespace GearWeb.Models.RootModels
 {
-    public class MainSiteRootModel
+    public class MainSiteRootModel : GearRootModel
     {
         
     }

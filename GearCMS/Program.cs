@@ -1,8 +1,5 @@
 using System.Reflection;
-using Gear.ContentManagement.Controllers;
 using Gear.Core;
-using Gear.DAO;
-using Gear.DAO.Interfaces;
 using Gear.Models;
 using GearCMS;
 using GearCMS.Models.PageModels;
@@ -15,24 +12,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 using Microsoft.Extensions.FileProviders;
+using Gear.GearConfiguration;
+using System.Configuration;
+
 
 var builder = WebApplication.CreateBuilder(args);
-
+GearApp.ConfigureGearServices(builder, "GearConnection");
 // Add services to the container.
-var gearAssembly = typeof(ManagementPanelController).Assembly;
-builder.Services.AddControllersWithViews()
-    .AddApplicationPart(gearAssembly)
-    .AddRazorRuntimeCompilation();
-
-builder.Services.Configure<MvcRazorRuntimeCompilationOptions>(options =>
-{
-    options.FileProviders.Add(new EmbeddedFileProvider(gearAssembly));
-});
-
-builder.Services.AddSingleton<IContentDAO>(new MockContentPageDAO());
-builder.Services.AddSingleton<IContentRouteProvider>(new MockContentRouteDAO());
-builder.Services.AddSingleton(new TemplateInfoProvider());
 var app = builder.Build();
+GearApp.CreateGearDbIfNotExist(app);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -51,7 +39,3 @@ app.UseAuthorization();
 //    pattern: "{controller=ManagementPanel}/{action=Get}");
 app.MapControllers();
 app.Run();
-
-
-
-//app.MapDynamicControllerRoute

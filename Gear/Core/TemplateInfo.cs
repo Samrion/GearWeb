@@ -8,9 +8,9 @@ namespace Gear.Core
 {
     public class TemplateInfo
     {
-        public string Name { get; set; }
-        public string Path { get; set; }
-        public Type UserModelType { get; set; }
+        public string Name { get; private set; }
+        public string Path { get; private set; }
+        public Type UserModelType { get; private set; }
 
         public TemplateInfo(string name, string path, Type userModelType)
         {

@@ -8,32 +8,39 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Management\Views\GearConfigLayout.cshtml" />
-    <None Remove="Management\Views\GearConfigPanel - Copy.cshtml" />
-    <None Remove="Management\Views\GearConfigPanel.cshtml" />
+    <None Remove="Management\UI\Scripts\main.js" />
+    <None Remove="Management\UI\Views\GearConfigLayout.cshtml" />
+    <None Remove="Management\UI\Views\GearConfigPanel.cshtml" />
   </ItemGroup>
 
 
 
   <ItemGroup>
-    <EmbeddedResource Include="Management\Views\GearConfigLayout.cshtml">
+    <EmbeddedResource Include="Management\UI\Scripts\angular.js" />
+    <EmbeddedResource Include="Management\UI\Scripts\main.js" />
+    <EmbeddedResource Include="Management\UI\Views\GearConfigLayout.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
-    <Content Include="Management\Views\GearConfigPanel - Copy.cshtml">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <EmbeddedResource Include="Management\Views\GearConfigPanel.cshtml">
+    <EmbeddedResource Include="Management\UI\Views\GearConfigPanel.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\NewFolder\" />
-    <Folder Include="Management\Css\" />
-    <Folder Include="Management\Scripts\" />
+    <Folder Include="GearConfiguration\NewFolder\" />
+    <Folder Include="Management\UI\Css\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.3" />
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Gear.Data\Gear.Data.csproj" />
   </ItemGroup>
 </Project>

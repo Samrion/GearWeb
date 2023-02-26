@@ -8,9 +8,10 @@ namespace Gear.Models
 {
     public class GearPageModel : GearModel
     {
-        public string? Url { get; set; }        
-        public string? Title { get; set; }
+        public GearRootModel? Root { get; set; }
         public GearPageModel? Ancestor { get; set; }
         public List<GearPageModel>? Descendants { get; set; }
+        public string? Url { get; set; }
+        public string? Title { get; set; }
     }
 }

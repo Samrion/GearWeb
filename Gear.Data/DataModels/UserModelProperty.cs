@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gear.Models
+namespace Gear.Data.DataModels
 {
     public class UserModelProperty
     {
+        public int ID { get; set; }
         public string Name { get; set; }
-        public object Value { get; set; }
+        public string Value { get; set; }
+        public int UserModelID { get; set; }
+        public UserModel UserModel { get; set; }
+
     }
 }
