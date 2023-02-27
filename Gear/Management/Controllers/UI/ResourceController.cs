@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gear.Management.UI.Controllers
+namespace Gear.Management.Controllers.UI
 {
     [Route("/gearCMS/resources")]
     public class GearResourceController : Controller

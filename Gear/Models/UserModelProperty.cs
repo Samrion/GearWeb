@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Gear.Models
 {
-    public class UserModelProperty
+    public class UserModelPropertyInfo
     {
-        public string Name { get; set; }
-        public object Value { get; set; }
+        public UserModelPropertyInfo(string name, Type type)
+        {
+            Name = name;
+            Type = type;
+        }
+        public string Name { get; }
+        public Type Type { get; }
     }
 }

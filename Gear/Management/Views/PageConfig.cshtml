@@ -1,0 +1,16 @@
+﻿@using Gear.Data.DataModels;
+@using System.Collections.Generic;
+
+@model GearPage
+@{
+	Layout = "/Management/Views/GearConfigLayout.cshtml";
+}
+<div>
+	<h1>@Model.Name</h1>
+	<p>@Model.Url</p>
+	<p>Template name: @Model.TemplateName</p>
+	@foreach(var property in Model.UserModel.Properties)
+	{
+		<p>@property.Name : @property.Value</p>
+	}
+</div>

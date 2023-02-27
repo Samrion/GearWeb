@@ -8,28 +8,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Management\UI\Scripts\main.js" />
-    <None Remove="Management\UI\Views\GearConfigLayout.cshtml" />
-    <None Remove="Management\UI\Views\GearConfigPanel.cshtml" />
+    <None Remove="Management\Scripts\main.js" />
+    <None Remove="Management\Views\GearConfigLayout.cshtml" />
+    <None Remove="Management\Views\GearConfigPanel.cshtml" />
+    <None Remove="Management\Views\PageConfig.cshtml" />
+    <None Remove="Management\Views\PagesDisplay.cshtml" />
   </ItemGroup>
 
 
 
   <ItemGroup>
-    <EmbeddedResource Include="Management\UI\Scripts\angular.js" />
-    <EmbeddedResource Include="Management\UI\Scripts\main.js" />
-    <EmbeddedResource Include="Management\UI\Views\GearConfigLayout.cshtml">
+    <EmbeddedResource Include="Management\Scripts\angular.js" />
+    <EmbeddedResource Include="Management\Scripts\main.js" />
+    <EmbeddedResource Include="Management\Views\GearConfigLayout.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Management\UI\Views\GearConfigPanel.cshtml">
+    <EmbeddedResource Include="Management\Views\PageConfig.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Views\PagesDisplay.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Views\GearConfigPanel.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\NewFolder\" />
-    <Folder Include="GearConfiguration\NewFolder\" />
-    <Folder Include="Management\UI\Css\" />
-    <Folder Include="Data\" />
+    <Folder Include="Management\Styles\" />
   </ItemGroup>
   
   <ItemGroup>

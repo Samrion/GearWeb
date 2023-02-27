@@ -6,14 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gear.Views
+namespace Gear.GearViews
 {
 
     public abstract class GearPage<T> : RazorPage<T>
     {
-        public GearPage()
-        {
-            Debug.WriteLine("XD");
-        }
+        
     }
 }

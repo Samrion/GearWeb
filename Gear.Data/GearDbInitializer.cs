@@ -34,8 +34,8 @@ namespace Gear.Data
             //HomePageModel
             var userModelProperties = new UserModelProperty[]
             {
-                new UserModelProperty { Name = "testProp1", UserModelID = 1},
-                new UserModelProperty { Name = "testProp2", UserModelID = 1}
+                new UserModelProperty { Name = "TestString", Value = "test", UserModelID = 1},
+                new UserModelProperty { Name = "TestValue", Value = "777", UserModelID = 1}
             };
             foreach (var userModelProperty in userModelProperties)
             {
@@ -47,7 +47,7 @@ namespace Gear.Data
             //homepage homepagemodel
             var gearPages = new GearPage[]
             {
-                new GearPage {Name = "Home page", Route = @"\homepage", TemplateName = "HomePage", UserModelID = 1}
+                new GearPage {Name = "Home page", Url = @"/homepage", TemplateName = "HomePage", UserModelID = 1}
             };
             foreach (var page in gearPages)
             {

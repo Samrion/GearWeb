@@ -1,5 +1,4 @@
 ﻿using Gear.Models;
-using Gear.Views;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
@@ -28,8 +27,8 @@ namespace Gear.Core
                     var name = x.Name[(x.Name.LastIndexOf('_') + 1)..];
                     var path = @"/" + x.Name.Replace('_', '/');
                     var userModelType = x.BaseType.GenericTypeArguments.ElementAt(0);
-                    var userModelProperties = userModelType.GetProperties();
-                    return new TemplateInfo(name, path, userModelType);
+                    var userModelProperties = userModelType.GetProperties().Select(x => new UserModelPropertyInfo(x.Name,x.PropertyType));
+                    return new TemplateInfo(name, path, userModelType, userModelProperties);
                 });
 
             foreach (var x in GearPageTemplatesInfo)

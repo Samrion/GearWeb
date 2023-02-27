@@ -1,0 +1,11 @@
+﻿
+@model List<Tuple<int,string>>
+@{
+	Layout = "/Management/Views/GearConfigLayout.cshtml";
+}
+<div>
+	@foreach(var gpage in Model)
+	{
+		<a href="pages/@gpage.Item1">@gpage.Item2</a>
+	}
+</div>

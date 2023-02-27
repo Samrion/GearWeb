@@ -1,6 +1,6 @@
 ﻿using Gear.Core;
 using Gear.Data;
-using Gear.Management.UI.Controllers;
+using Gear.Management.Controllers.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +13,10 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace Gear.GearConfiguration
+namespace Gear
 {
     public static class GearApp
-    {      
+    {
         public static void ConfigureGearServices(WebApplicationBuilder builder, string connectionStringName)
         {
             //basic config

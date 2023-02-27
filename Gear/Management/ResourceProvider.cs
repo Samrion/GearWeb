@@ -10,8 +10,8 @@ namespace Gear.Management
 {
     internal static class ResourceProvider
     {
-        private const string ScriptBasePath = "Gear.Management.UI.Scripts.";
-        private const string StyleBasePath = "Gear.Management.UI.Css.";
+        private const string ScriptBasePath = "Gear.Management.Scripts.";
+        private const string StyleBasePath = "Gear.Management.Styles.";
 
 
         public async static Task<string> GetEmbeddedScript(string scriptName)

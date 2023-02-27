@@ -9,7 +9,7 @@ namespace Gear.Data.DataModels
     public class GearPage
     {
         public int ID { get; set; }
-        public string Route { get; set; }
+        public string Url { get; set; }
         public string Name { get; set; }
         public string TemplateName { get; set; }
         public int UserModelID { get; set; }
