@@ -1,0 +1,41 @@
+﻿
+body {
+background:black;
+}
+
+.main {
+display:flex;
+flex-direction:column;
+}
+
+nav {
+border:solid 10px #000635;
+border-radius:10px;
+background:#adcae6;
+padding:10px;
+}
+
+.topMenu {
+width:100%;
+}
+
+.leftMenu {
+width:10%;
+height:100%;
+}
+
+.topMenuButton {
+background:#cae6ff;
+font-size: 20px;
+height:100%;
+}
+
+.contentWrapper
+{
+display:flex;
+}
+
+.contentDisplay
+{
+
+}

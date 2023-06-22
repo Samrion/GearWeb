@@ -37,6 +37,7 @@ namespace Gear.Data
                 new UserModelProperty { Name = "TestString", Value = "test", UserModelID = 1},
                 new UserModelProperty { Name = "TestValue", Value = "777", UserModelID = 1}
             };
+
             foreach (var userModelProperty in userModelProperties)
             {
                 context.UserProperties.Add(userModelProperty);

@@ -1,10 +1,25 @@
-﻿
-@using System.Diagnostics
-
-@{
+﻿@{
 	Layout = "/Management/Views/GearConfigLayout.cshtml";
 }
-<div>
-	<a href="pages">Pages</a>
-	<a href="templates">Templates</a>
-</div>
+
+<main ng-controller="main as mainCtrl" class="main">
+
+	<nav class="topMenu">
+		<button class="topMenuButton" ng-click="getPages()">Pages</button>
+		<button class="topMenuButton" ng-click="getTemplates()">Templates</button>
+	</nav>
+
+	<div class="contentWrapper">
+		<nav class="leftMenu">
+			<div class="contentList" ng-repeat="page in pages">
+				<button ng-click="getPage(page.id)">{{page.name}}</button>
+			</div>
+		</nav>
+
+		<section class="contentDisplay">
+			<div class="content" ng-bind-html="content">
+			</div>
+		</section>
+	</div>
+
+</main>

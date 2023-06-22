@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="Management\Scripts\main.js" />
+    <None Remove="Management\Styles\normalize.css" />
+    <None Remove="Management\Styles\style.css" />
     <None Remove="Management\Views\GearConfigLayout.cshtml" />
     <None Remove="Management\Views\GearConfigPanel.cshtml" />
     <None Remove="Management\Views\PageConfig.cshtml" />
@@ -20,6 +22,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Management\Scripts\angular.js" />
     <EmbeddedResource Include="Management\Scripts\main.js" />
+    <EmbeddedResource Include="Management\Styles\normalize.css" />
+    <EmbeddedResource Include="Management\Styles\style.css" />
     <EmbeddedResource Include="Management\Views\GearConfigLayout.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
@@ -29,12 +33,9 @@
     <EmbeddedResource Include="Management\Views\PagesDisplay.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Management\Views\GearConfigPanel.cshtml">
+    <Content Include="Management\Views\GearConfigPanel.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Management\Styles\" />
+    </Content>
   </ItemGroup>
   
   <ItemGroup>
@@ -42,10 +43,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.3" />
-    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.32" />
   </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Gear.Data\Gear.Data.csproj" />
+    <ProjectReference Include="..\Gear.UI\Gear.UI.csproj" />
   </ItemGroup>
 </Project>

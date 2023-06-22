@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GearCMS", "GearCMS\GearCMS.csproj", "{BC71E3A9-932B-49CD-858E-20ADF0949C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GearEx", "GearCMS\GearEx.csproj", "{BC71E3A9-932B-49CD-858E-20ADF0949C3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gear", "Gear\Gear.csproj", "{DA9F4012-6355-4095-AE71-53B76C1A6303}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GearTest", "GearTest\GearTest.csproj", "{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gear.Data", "Gear.Data\Gear.Data.csproj", "{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gear.Data", "Gear.Data\Gear.Data.csproj", "{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gear.UI", "Gear.UI\Gear.UI.csproj", "{DB366423-09EF-40C3-A7D3-8B8ACED07F3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{DA9F4012-6355-4095-AE71-53B76C1A6303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9F4012-6355-4095-AE71-53B76C1A6303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9F4012-6355-4095-AE71-53B76C1A6303}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BCAAD4F-BC31-4164-9E87-E80269D47E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4B97596-AACC-4A44-87B2-8EABD0BEB8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB366423-09EF-40C3-A7D3-8B8ACED07F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB366423-09EF-40C3-A7D3-8B8ACED07F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB366423-09EF-40C3-A7D3-8B8ACED07F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB366423-09EF-40C3-A7D3-8B8ACED07F3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

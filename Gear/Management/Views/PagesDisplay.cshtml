@@ -1,11 +1,5 @@
-﻿
-@model List<Tuple<int,string>>
-@{
-	Layout = "/Management/Views/GearConfigLayout.cshtml";
+﻿@model List<Tuple<int,string>>
+@foreach (var gpage in Model)
+{
+	<button ng-click="setPage(@gpage.Item1)">@gpage.Item2</button>
 }
-<div>
-	@foreach(var gpage in Model)
-	{
-		<a href="pages/@gpage.Item1">@gpage.Item2</a>
-	}
-</div>

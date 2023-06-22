@@ -19,8 +19,5 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-//app.MapControllerRoute(
-//    name: "config",
-//    pattern: "{controller=ManagementPanel}/{action=Get}");
 app.MapControllers();
 app.Run();

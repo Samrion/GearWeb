@@ -12,7 +12,5 @@ namespace Gear.Data.DataModels
         public string Name { get; set; }
         public string Value { get; set; }
         public int UserModelID { get; set; }
-        public UserModel UserModel { get; set; }
-
     }
 }
